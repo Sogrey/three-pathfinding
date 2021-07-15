@@ -64,5 +64,8 @@
 		"LICENSE",
 		"package.json",
 		"package-lock.json"
-	]
+	],
+	"dependencies": {
+		"three.js": "^0.77.1"
+	}
 }

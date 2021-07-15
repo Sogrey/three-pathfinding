@@ -1,5 +1,7 @@
 const THREE = global.THREE = require('three');
-const { Pathfinding } = require('../');
+const {
+  Pathfinding
+} = require('../');
 const process = require('process');
 
 const NS_PER_SEC = 1e9;
@@ -13,7 +15,7 @@ function run(name, func, iterations) {
   const times = [];
   for (let i = 0; i < iterations; i++) {
     let start = process.hrtime();
-	func();
+    func();
     let elapsed = process.hrtime(start);
     times.push(elapsed[0] * NS_PER_SEC + elapsed[1]);
   }

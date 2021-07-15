@@ -3,9 +3,12 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <title>three-pathfinding demo</title>
 <link href="style.css" rel="stylesheet">
-<script src="https://unpkg.com/three@0.124.0/build/three.min.js"></script>
-<script src="https://unpkg.com/three@0.124.0/examples/js/controls/OrbitControls.js"></script>
-<script src="https://unpkg.com/three@0.124.0/examples/js/loaders/GLTFLoader.js"></script>
+<!-- <script src="https://unpkg.com/three@0.124.0/build/three.min.js"></script> -->
+<script src="../node_modules/three/build/three.min.js"></script>
+<!-- <script src="https://unpkg.com/three@0.124.0/examples/js/controls/OrbitControls.js"></script> -->
+<script src="../node_modules/three/examples/js/controls/OrbitControls.js"></script>
+<!-- <script src="https://unpkg.com/three@0.124.0/examples/js/loaders/GLTFLoader.js"></script> -->
+<script src="../node_modules/three/examples/js/loaders/GLTFLoader.js"></script>
 <script src="../dist/three-pathfinding.umd.js"></script>
 
 <body>
@@ -111,13 +114,14 @@
 
 				pathfinder.setZoneData( ZONE, zone );
 
-				const navWireframe = new THREE.Mesh(_navmesh.geometry, new THREE.MeshBasicMaterial({
-					color: 0x808080,
-					wireframe: true
-				}));
-				navWireframe.position.y = OFFSET / 2;
-				scene.add(navWireframe);
+				// const navWireframe = new THREE.Mesh(_navmesh.geometry, new THREE.MeshBasicMaterial({
+				// 	color: 0x808080,
+				// 	wireframe: true
+				// }));
+				// navWireframe.position.y = OFFSET / 2;
+				// scene.add(navWireframe);
 
+				// 用於拾取位置
 				navmesh = new THREE.Mesh(_navmesh.geometry, new THREE.MeshBasicMaterial({
 					color: Color.NAVMESH,
 					opacity: 0.75,
